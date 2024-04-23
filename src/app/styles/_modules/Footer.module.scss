@@ -1,0 +1,61 @@
+@use '@/styles/_mixins/breakpoints';
+@use '@/styles/_mixins/shadows';
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: var(--zindex-content);
+    padding: var(--spacing-4);
+    background-color: var(--color-secondary);
+    background: linear-gradient(225deg, rgba(210,200,8,1) 31%, rgb(219, 165, 50) 63%, rgb(174, 85, 137) 72%);
+
+    button {
+        position: relative;
+    }
+
+    ul {
+        display: flex;
+        position: absolute;
+        height: 0;
+        width: 100%;
+        right: 0;
+        bottom: 100%;
+        opacity: 0;
+        transition: 1s height ease-in-out, 1s opacity ease-in-out;
+        visibility: hidden;
+        z-index: 1;
+
+        li {
+            visibility: hidden;
+
+            a {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        &.active {
+            visibility: visible;
+            opacity: 1;
+            height: 100%;
+            bottom: 0;
+            
+            li {
+                visibility: visible;
+
+                &:first-of-type {
+                    border-right: none;
+                }
+            }
+        }
+    }
+
+    @include breakpoints.min-width(md) {
+        padding: var(--spacing-3) var(--spacing-5);
+    }
+
+    @include breakpoints.min-width(lg) {
+        padding: var(--spacing-3) var(--spacing-6);
+    }
+}

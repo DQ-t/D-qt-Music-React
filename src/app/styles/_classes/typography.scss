@@ -1,0 +1,35 @@
+html {
+    font-size: clamp(10px, 10px + 0.312988vw, 12px);
+    
+    @include min-width(md) {
+        font-size: clamp(12px, 10.365862px + 0.312988vw, 14px);
+    }
+    
+    @include min-width(lg) {
+        font-size: clamp(14px, 9.292762px + 0.312988vw, 16px);
+    }
+}
+
+h1 {
+    @include typography-h1;
+}
+
+h2 {
+    @include typography-h2;
+}
+
+h3 {
+    @include typography-h3;
+}
+
+body, p, div, span, time, a, button {
+    @include body-normal;
+}
+
+small {
+    @include body-small;
+}
+
+.big {
+    @include body-big;
+}

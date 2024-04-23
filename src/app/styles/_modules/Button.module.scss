@@ -1,0 +1,55 @@
+@use '@/styles/_mixins/shadows';
+
+.button_primary {
+    @include shadows.cartoonyShadow(5px, 5px, var(--color-primary-lighter));
+
+    display: flex;
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+    padding: var(--spacing-3) var(--spacing-5);
+    z-index: var(--zindex-content);
+    border-radius: 5px;
+    position: relative;
+
+    &:hover {
+        margin-top: .5px;
+        color: var(--color-text-secondary-lighter);
+
+        > a,
+        > span {
+            color: var(--color-text-secondary-lighter);
+        }
+    }
+
+    &:active {
+        margin-top: 2px;
+    }
+
+    &::before {
+        border-top-left-radius: 100%;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    &::after {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 200%;
+        border-bottom-right-radius: 5px;
+    }
+}
+
+.button_secondary {
+    display: flex;
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-primary);
+    color: var(--color-text-secondary);
+
+    &:hover {
+        color: var(--color-text-secondary-lighter);
+
+        > a,
+        > span {
+            color: var(--color-text-secondary-lighter);
+        }
+    }
+}

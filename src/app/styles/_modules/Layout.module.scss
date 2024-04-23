@@ -1,0 +1,35 @@
+@use '@/styles/_mixins/breakpoints';
+
+.main_container {
+    height: 100vh;
+}
+
+.page_background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.page_container {
+    position: relative;
+    padding: 0 var(--spacing-4);
+    z-index: var(--zindex-content);
+
+    @include breakpoints.min-width(md) {
+        padding: 0 var(--spacing-5);
+    }
+
+    @include breakpoints.min-width(lg) {
+        padding: 0 var(--spacing-6);
+    }
+}
+
+.page_section {
+
+}
+
+.page_component {
+
+}

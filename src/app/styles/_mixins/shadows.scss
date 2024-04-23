@@ -1,0 +1,21 @@
+@mixin cartoonyShadow($width, $height, $color) {
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: $height;
+        background-color: $color;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $color;
+        width: $width;
+    }
+}

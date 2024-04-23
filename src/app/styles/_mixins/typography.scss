@@ -1,0 +1,54 @@
+
+@mixin typography-h1 {
+    color: var(--color-text-primary);
+    font-family: var(--font-secondary);
+    font-size: 3.206rem;
+    font-weight: var(--font-weight-semi-bold);
+    letter-spacing: var(--letter-spacing-xs);
+    line-height: var(--line-height-120);
+}
+
+@mixin typography-h2 {
+    color: var(--color-text-primary);
+    font-family: var(--font-secondary);
+    font-size: 2.178rem;
+    font-weight: var(--font-weight-semi-bold);
+    letter-spacing: var(--letter-spacing-sm);
+    line-height: var(--line-height-120);
+}
+
+@mixin typography-h3 {
+    color: var(--color-text-primary);
+    font-family: var(--font-secondary);
+    font-size: 1.913rem;
+    font-weight: var(--font-weight-semi-bold);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-120);
+}
+
+@mixin body-big {
+    color: var(--color-text-primary);
+    font-family: var(--font-primary);
+    font-size: 1.137rem;
+    font-weight: var(--font-weight-light);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-150);
+}
+
+@mixin body-normal {
+    color: var(--color-text-primary);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: var(--font-weight-light);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-150);
+}
+
+@mixin body-small {
+    color: var(--color-text-primary);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: var(--font-weight-regular);
+    letter-spacing: var(--letter-spacing-lg);
+    line-height: var(--line-height-150);
+}

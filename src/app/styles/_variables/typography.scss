@@ -1,0 +1,22 @@
+:root {
+    /* Font Families */
+    --font-primary: 'Space Grotesk Variable', sans-serif;
+    --font-secondary: 'Cormorant Infant', serif;
+    
+    /* Font weights */
+    --font-weight-semi-bold: 600;
+    --font-weight-medium: 500;
+    --font-weight-regular: 400;
+    --font-weight-light: 300;
+    
+    /* Line heights */
+    --line-height-150: 1.5;
+    --line-height-120: 1.2;
+    
+    /* Letter Spacing */
+    --letter-spacing-xs: -1.5px;
+    --letter-spacing-sm: -.5px;
+    --letter-spacing-0: 0;
+    --letter-spacing-md: .25px;
+    --letter-spacing-lg: .5px;
+}
