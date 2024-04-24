@@ -1,0 +1,12 @@
+.bad_image {
+    border-radius: 10px;
+    transform: scaleX(-1);
+
+    // Make sure nobody sees how bad this picture is by blasting it into oblivion
+    filter:
+        saturate(7)
+        hue-rotate(-22deg)
+        contrast(1)
+        grayscale(.3)
+    ;
+}

@@ -5,17 +5,19 @@ import button from '@/styles/_modules/Button.module.scss';
 import LanguageDropdown from '@/components/LanguageDropdown'
 import { useDropdown } from '@/hooks/useDropdown';
 
+interface FooterProps {
+    title: string
+    selectLanguage: string
+    en: string
+    nl: string
+}
+
 export default function Footer({
     title,
     selectLanguage,
     en,
     nl
-}: {
-    title: string,
-    selectLanguage: string,
-    en: string,
-    nl: string
-}): JSX.Element {
+}: FooterProps): JSX.Element {
     const dropdownButton = useRef<HTMLButtonElement>(null);
     const [showLanguages, setShowLanguages] = useDropdown(dropdownButton)
 
@@ -27,7 +29,7 @@ export default function Footer({
                 ref={dropdownButton}
                 type="button"
                 className={`${button.general} ${button.primary}`}
-                onClick={() => setShowLanguages(!showLanguages)}
+                onClick={() => setShowLanguages(true)}
             >
                 {selectLanguage}
 

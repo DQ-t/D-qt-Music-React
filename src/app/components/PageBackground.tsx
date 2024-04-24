@@ -3,12 +3,12 @@ import Image from "next/image";
 import layouts from '@/styles/_modules/Layout.module.scss'
 import { useEffect, useState } from "react";
 
-export default function PageBackground() {
+export default function PageBackground({alt} : {alt: string}): JSX.Element {
     const [scrolling, setScrolling] = useState<boolean>(false)
 
     // Darken image on scroll
     useEffect(() => {    
-        const checkIfScrolling = () =>
+        const checkIfScrolling = (): void =>
             window.scrollY > 100
                 ? setScrolling(true)
                 : setScrolling(false)
@@ -24,7 +24,7 @@ export default function PageBackground() {
         `}>
             <Image
                 src="/home_1.JPG"
-                alt="Page background picture"
+                alt={alt}
                 fill
             />
         </div>

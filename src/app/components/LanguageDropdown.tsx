@@ -6,20 +6,19 @@ import Link from "next/link"
 import { useParams } from 'next/navigation'
 import { useState } from 'react'
 
-export default function LanguageDropdown({
-    show,
-    en,
-    nl,
-}: {
-    show: boolean,
-    en: string,
-    nl: string,
-}): JSX.Element | null {
-    const locale = useParams().locale
-    const localeClassName = locale === 'en' ? footer.en : footer.nl
+interface LanguageDropdownProps {
+    show: boolean
+    en: string
+    nl: string
+}
+
+export default function LanguageDropdown({show, en, nl}: LanguageDropdownProps): JSX.Element {
+    const paramLocale: string | string[] = useParams().locale
+    const locale: string = Array.isArray(paramLocale) ? paramLocale[0] : paramLocale
+    const localeClassName: string = locale === 'en' ? footer.en : footer.nl
 
     const [hoverDirection, setHoverDirection] = useState<string>(localeClassName)
-    const isActiveClass: string | null = show ? utilities.active : null;
+    const isActiveClass: string | null = show ? utilities.active : '';
 
     return (
         <ul

@@ -1,8 +1,18 @@
 {
+    "alt": {
+        "page-background": "Pagina achtergrond foto",
+        "studio": "Het is een beetje rommelig maar wel gezel"
+    },
     "footer": {
         "title": "D-qt Music",
         "select-language": "Kies een taal",
         "en": "EN",
         "nl": "NL"
+    },
+    "production": {
+        "title": "Productie & Compositie",
+        "content": "Ik maak composities en producties in iedere stijl of genre. Van sample-heavy boombap tot trap, synthpop of rock, alles is mogelijk. Ik schrijf ook graag composities en kan bladmuziek maken of akkoordprogressies bedenken om beginnende muzikanten een handje te helpen.",
+        "content-add": "Ik help ook bestaande projecten of muzikanten die in een writers block zitten hun stijl te verdiepen en nieuwe inspiratie te vinden.",
+        "button": "Contact me"
     }
 }

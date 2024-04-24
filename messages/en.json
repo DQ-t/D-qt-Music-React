@@ -1,8 +1,18 @@
 {
+    "alt": {
+        "page-background": "Page background picture",
+        "studio": "It's a messy home studio but we make it work"
+    },
     "footer": {
         "title": "D-qt Music",
         "select-language": "Select a language",
         "en": "EN",
         "nl": "NL"
+    },
+    "production": {
+        "title": "Production & Composition",
+        "content": "I create compositions or productions in any style or genre. From sample heavy boombap to trap, synthpop or rock, anything is possible. I also love writing compositions and can create sheet music and chord progressions for aspiring musicians to use in their songs.",
+        "content-add": "I also help existing projects or struggling musicians get out of writers block or deepen their style with new inspirations.",
+        "button": "Contact me"
     }
 }

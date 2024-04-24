@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from '@/styles/_modules/Nav.module.scss';
 
-export default function Nav() {
+export default function Nav(): JSX.Element {
     return (
         <nav className={styles.navigation}>
             <Image

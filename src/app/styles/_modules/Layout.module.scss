@@ -1,9 +1,5 @@
 @use '@/styles/_mixins/breakpoints';
 
-.main_container {
-    height: 100vh;
-}
-
 .page_background {
     position: fixed;
     top: 0;
@@ -12,35 +8,31 @@
     left: 0;
 
     &.is_scrolling {
-        &::before {
-            content: '';
-            background: rgb(0, 0, 0, 0.65);
-            mix-blend-mode: unset;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: var(--zindex-content);
-        }
+        filter: brightness(50%);
+        transition: filter .5s ease-in-out;
     }
 }
 
 .page_container {
     position: relative;
-    padding: 0 var(--spacing-4);
+    padding: var(--spacing-5) var(--spacing-4) var(--spacing-5) var(--spacing-2);
     z-index: var(--zindex-content);
 
     @include breakpoints.min-width(md) {
-        padding: 0 var(--spacing-5);
+        padding: var(--spacing-6) var(--spacing-5) var(--spacing-6) var(--spacing-3);
     }
 
     @include breakpoints.min-width(lg) {
-        padding: 0 var(--spacing-6);
+        padding: var(--spacing-7) var(--spacing-6) var(--spacing-7) var(--spacing-4);
     }
 }
 
-.page-section {
+.main_container {
+    margin-top: 100vh;
+}
 
+.page_section {
+    height: 100vh;
 }
 
 .page-component {

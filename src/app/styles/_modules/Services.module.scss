@@ -1,0 +1,38 @@
+.general {
+    padding: 0 var(--spacing-6);
+
+    header {
+        padding: var(--spacing-6) 0;
+        display: flex;
+        align-items: center;
+
+        h1 {
+            min-width: fit-content;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 100%);
+            margin-left: var(--spacing-3);
+        }
+    }
+
+    figure {
+        display: flex;
+
+        picture {
+            flex: 1;
+        }
+
+        figcaption {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: var(--spacing-4);
+            flex: 1;
+        }
+    }
+}
