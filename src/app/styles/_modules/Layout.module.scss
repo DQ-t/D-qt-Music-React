@@ -10,6 +10,19 @@
     right: 0;
     bottom: 0;
     left: 0;
+
+    &.is_scrolling {
+        &::before {
+            content: '';
+            background: rgb(0, 0, 0, 0.65);
+            mix-blend-mode: unset;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: var(--zindex-content);
+        }
+    }
 }
 
 .page_container {
@@ -26,10 +39,10 @@
     }
 }
 
-.page_section {
+.page-section {
 
 }
 
-.page_component {
+.page-component {
 
 }

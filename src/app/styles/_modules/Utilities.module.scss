@@ -1,0 +1,31 @@
+
+.toggle_visibility {
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s opacity ease-in-out;
+
+    * {
+        visibility: hidden;
+    }
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+
+        * {
+            visibility: visible;
+        }
+    }
+}
+
+.slide_up {
+    top: 100%;
+    transition:
+        .5s top ease-in-out,
+        .8s opacity ease-in-out
+    ;
+
+    &.active {
+        top: 0;
+    }
+}

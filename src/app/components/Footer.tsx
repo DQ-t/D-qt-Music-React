@@ -1,8 +1,9 @@
 "use client"
-import styles from "@/styles/_modules/Footer.module.scss"
-import buttons from '@/styles/_modules/Button.module.scss';
-import { useState } from "react"
-import LanguageDropdown from "./LanguageDropdown";
+import { useRef } from 'react'
+import styles from '@/styles/_modules/Footer.module.scss'
+import button from '@/styles/_modules/Button.module.scss';
+import LanguageDropdown from '@/components/LanguageDropdown'
+import { useDropdown } from '@/hooks/useDropdown';
 
 export default function Footer({
     title,
@@ -15,15 +16,17 @@ export default function Footer({
     en: string,
     nl: string
 }): JSX.Element {
-    const [showLanguages, setShowLanguages] = useState(false);
+    const dropdownButton = useRef<HTMLButtonElement>(null);
+    const [showLanguages, setShowLanguages] = useDropdown(dropdownButton)
 
     return (
         <footer className={styles.footer}>
             <h5>{title}</h5>
 
             <button
+                ref={dropdownButton}
                 type="button"
-                className={buttons.button_primary}
+                className={`${button.general} ${button.primary}`}
                 onClick={() => setShowLanguages(!showLanguages)}
             >
                 {selectLanguage}

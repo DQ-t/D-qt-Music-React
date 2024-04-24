@@ -2,7 +2,7 @@
     "footer": {
         "title": "D-qt Music",
         "select-language": "Select a language",
-        "en": "Switch to English",
-        "nl": "Switch to Dutch"
+        "en": "EN",
+        "nl": "NL"
     }
 }

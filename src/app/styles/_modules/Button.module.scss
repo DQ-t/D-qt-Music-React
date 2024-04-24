@@ -1,23 +1,26 @@
 @use '@/styles/_mixins/shadows';
 
-.button_primary {
+.general {
+    display: flex;
+    position: relative;
+    padding: var(--spacing-3) var(--spacing-5);
+    border-radius: 5px;
+    z-index: var(--zindex-content);
+}
+
+.primary {
     @include shadows.cartoonyShadow(5px, 5px, var(--color-primary-lighter));
 
-    display: flex;
     background-color: var(--color-primary);
     color: var(--color-text-primary);
-    padding: var(--spacing-3) var(--spacing-5);
-    z-index: var(--zindex-content);
-    border-radius: 5px;
-    position: relative;
 
     &:hover {
         margin-top: .5px;
-        color: var(--color-text-secondary-lighter);
+        color: var(--color-text-primary-darker);
 
         > a,
         > span {
-            color: var(--color-text-secondary-lighter);
+            color: var(--color-text-primary-darker);
         }
     }
 
@@ -38,8 +41,7 @@
     }
 }
 
-.button_secondary {
-    display: flex;
+.secondary {
     background-color: var(--color-secondary);
     border: 1px solid var(--color-primary);
     color: var(--color-text-secondary);
